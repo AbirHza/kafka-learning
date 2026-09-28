@@ -1,83 +1,121 @@
-# Kafka Learning Project
+# Kafka Learning
 
-Projet personnel d'apprentissage consacré à Apache Kafka, avec une intégration progressive dans l'écosystème Java / Spring Boot.
+## Objectif
 
-L'objectif est de comprendre les concepts fondamentaux de Kafka à travers des expérimentations pratiques avant son intégration dans une application Java.
+Ce repository documente mon apprentissage d'**Apache Kafka**, depuis la découverte de ses concepts fondamentaux jusqu'à son intégration dans une application **Spring Boot**.
 
-## 🎯 Objectifs
+Le parcours est organisé en plusieurs phases pratiques et progressives.
 
-* Comprendre les concepts fondamentaux de Kafka
-* Manipuler Kafka avec Docker
-* Pratiquer les opérations de base avec Kafka
-* Comprendre progressivement le fonctionnement des producers, consumers et consumer groups
-* Approfondir Kafka à travers des expérimentations pratiques
+---
 
-## 🛠️ Technologies
+## Phases d'apprentissage
 
-* Java 21
-* Apache Kafka
-* Docker
-* Docker Compose
-* Git / GitHub
+### Phase 1 — Kafka Fundamentals
 
-## 📚 Progression
-
-### Phase 1 — Kafka Fundamentals ✅
-
-Première phase réalisée sans Spring Boot afin de comprendre les concepts fondamentaux de Kafka.
+Découverte de Kafka sans Spring Boot, à travers les outils en ligne de commande.
 
 Concepts étudiés :
 
 * Architecture KRaft
-* Broker
-* Topic
-* Partition
-* Producer
-* Consumer
-* Consumer Group
-* Offset
-* Lag
+* Broker et Topic
+* Partitions
+* Producer et Consumer
+* Consumer Groups
+* Offsets et Lag
 
-Documentation :
+Documentation : [commands/phase-1.md](commands/phase-1.md)
 
-`commands/phase-1.md`
+### Phase 2 — Spring Boot + Kafka
 
-### Prochaines phases
+Intégration de Kafka dans une application Spring Boot.
 
-Les prochaines phases seront ajoutées progressivement au fur et à mesure de l'avancement du projet.
+Concepts et outils pratiqués :
 
-## 🐳 Démarrage
+* Spring Kafka
+* KafkaTemplate
+* @KafkaListener
+* API REST
+* Sérialisation et désérialisation JSON
+* Consumer Groups
+* Offsets et Lag
 
-Kafka est exécuté dans un conteneur Docker.
+Documentation : [commands/phase-2.md](commands/phase-2.md)
 
-Démarrer Kafka :
+Application : [spring-kafka-demo](spring-kafka-demo/)
 
-```cmd id="8p4x2m"
-docker compose up -d
-```
+---
 
-Vérifier le conteneur :
+## Environnement
 
-```cmd id="q9s6hn"
-docker ps
-```
+* Java 21
+* Apache Kafka
+* Docker et Docker Compose
+* Spring Boot
+* Spring Kafka
+* Maven
 
-Kafka est accessible sur :
+Kafka est exécuté dans Docker en mode KRaft, sans ZooKeeper.
 
-```text id="j5m2xk"
+Adresse locale du broker :
+
+```text
 localhost:9092
 ```
 
-## 📁 Structure du projet
+---
 
-```text id="3t8v4n"
+## Structure du repository
+
+```text
 kafka-learning/
 ├── docker-compose.yml
 ├── README.md
-└── commands/
-    └── phase-1.md
+├── commands/
+│   ├── phase-1.md
+│   └── phase-2.md
+└── spring-kafka-demo/
+    ├── pom.xml
+    └── src/
 ```
 
-## 📌 Progression du projet
+---
 
-Ce repository évolue progressivement au fil de l'apprentissage et des expérimentations pratiques avec Kafka.
+## Progression
+
+```text
+Phase 1
+Kafka Fundamentals
+       |
+       v
+Kafka CLI
+       |
+       v
+Topics, Partitions
+       |
+       v
+Producer, Consumer
+       |
+       v
+Consumer Groups
+       |
+       v
+Offsets, Lag
+       |
+       v
+Phase 2
+Spring Boot + Kafka
+       |
+       v
+KafkaTemplate
+       |
+       v
+@KafkaListener
+       |
+       v
+REST API + JSON
+       |
+       v
+Consumer Groups + Lag
+```
+
+Ce repository sera enrichi progressivement avec de nouvelles expériences et fonctionnalités Kafka.
