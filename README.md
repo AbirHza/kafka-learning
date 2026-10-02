@@ -43,6 +43,25 @@ Documentation : [commands/phase-2.md](commands/phase-2.md)
 
 Application : [spring-kafka-demo](spring-kafka-demo/)
 
+### Phase 3 — Kafka Advanced Concepts with Spring Kafka
+
+Approfondissement de la consommation distribuée, de la gestion des erreurs et des offsets avec Spring Kafka.
+
+Concepts et outils pratiqués :
+
+* Partitions & concurrency
+* Multiple Spring Boot instances
+* Consumer Groups
+* Rebalance & failover
+* Retry with `DefaultErrorHandler`
+* Dead Letter Topic (DLT)
+* DLT reprocessing
+* Offsets & Lag
+* Message replay
+* Offset reset
+
+Documentation : [commands/phase-3.md](commands/phase-3.md)
+
 ---
 
 ## Environnement
@@ -68,11 +87,13 @@ localhost:9092
 
 ```text
 kafka-learning/
+
 ├── docker-compose.yml
 ├── README.md
 ├── commands/
 │   ├── phase-1.md
-│   └── phase-2.md
+│   ├── phase-2.md
+│   └── phase-3.md
 └── spring-kafka-demo/
     ├── pom.xml
     └── src/
@@ -116,6 +137,34 @@ REST API + JSON
        |
        v
 Consumer Groups + Lag
+       |
+       v
+Phase 3
+Kafka Advanced Concepts
+       |
+       v
+Partitions & Concurrency
+       |
+       v
+Multiple Instances
+       |
+       v
+Rebalance & Failover
+       |
+       v
+Retry & DLT
+       |
+       v
+DLT Reprocessing
+       |
+       v
+Offsets & Lag
+       |
+       v
+Message Replay
+       |
+       v
+Offset Reset
 ```
 
 Ce repository sera enrichi progressivement avec de nouvelles expériences et fonctionnalités Kafka.
