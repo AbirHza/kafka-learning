@@ -13,6 +13,6 @@ public class OrderProducer {
     }
 
     public void sendOrder(Order order){
-        kafkaTemplate.send("orders.created",order);
+        kafkaTemplate.send("orders.spring",order);
     }
 }
